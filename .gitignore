@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# cashing
+.eslintcache
 # testing
 /coverage
 
