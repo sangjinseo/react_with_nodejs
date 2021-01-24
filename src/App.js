@@ -55,16 +55,26 @@ function App() {
 				<p> 2월 19일 발행 </p>
 				<hr />
 			</div>
-			{/* 버튼을 클릭하면 모달창 열림 , 한번더 누르면 닫힘 */}
-			<button
-				onClick={() => {
-					modal변경(!modal);
-					// alert(!modal);
-				}}
-			>
-				열고닫는버튼
-			</button>
-			{modal === true ? <Modal /> : null}
+			{글제목.map(function (글) {
+				return (
+					<div className="list">
+						<h3>
+							{' '}
+							{글}{' '}
+							<span
+								onClick={() => {
+									따봉변경(따봉 + 1);
+								}}
+							>
+								👍
+							</span>
+							{따봉}
+						</h3>
+						<p> 2월 18일 발행 </p>
+						<hr />
+					</div>
+				);
+			})}
 		</div>
 	);
 }
